@@ -1,0 +1,10 @@
+FROM node:11.15-stretch
+
+WORKDIR /usr/app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . ./
+
+CMD ["npm", "start"]
