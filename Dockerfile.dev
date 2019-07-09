@@ -1,8 +1,8 @@
-FROM node:11.15-stretch
+FROM node:alpine
 
 WORKDIR /usr/app
 
-COPY package*.json ./
+COPY package.json ./
 RUN npm install
 
 COPY . ./
